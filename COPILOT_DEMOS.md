@@ -66,7 +66,6 @@ If you can't remember it, just hover your pointer on top of a suggestion to make
 
 - Copilot can help you also to write `RegExp patterns`. Try these:
 ```ts
-// function that validates the format of a GUID string
 
 // function that validates the format of a IPV6 address string
 ```
