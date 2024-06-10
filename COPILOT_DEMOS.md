@@ -8,7 +8,6 @@ This a list of prompts xith explaination you can use to demo or simply discover 
 - [Sharepoint Link](https://teams.microsoft.com/l/message/19:9e3c0d7097f34928b16f28d5ccc34b5a@thread.skype/1681479717297?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&groupId=98c78e40-e3a1-43ab-9891-7fdc081c6136&parentMessageId=1679658115567&teamName=Club%20Azure%20Insiders&channelName=%F0%9F%92%BB%20AppDev&createdTime=1681479717297) [`Microsoft Internal`]
 - [External sharing link](https://info.microsoft.com/FR-DevOps-VDEO-FY23-04Apr-19-Replay-Cafe-Insiders-GitHub-Copilot-SRGCM9963_LP01-Registration---Form-in-Body.html)
 
-2. You can find out more on the official **Github Copilot Demos repo** here: https://github.com/gh-msft-innersource/Copilot-demo-templates/ [`Microsoft Internal`]
 
 <br>
 
