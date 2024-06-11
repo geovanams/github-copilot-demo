@@ -260,94 +260,55 @@ This documentation is generated with Github Copilot to show what the tool can do
 ##
 ```
 
+# Demo - GitHub Copilot Chat
+GitHub Copilot é uma IA generativa e, portanto, perfeita para gerar código, mas possui poderosos recursos de análise de seu código que podem ser usados ​​em diversos casos para melhorar a qualidade do código, como: encontrar problemas de segurança, más práticas em seu código e gerar uma correção, refatorar e adicionar comentários ao código legado, gerar testes, etc...
 
-## Code Translation
+## Iniciar com Copilot chat
 
-*Copilot can understand and generate natural languages and code language in both way so by combining everything you can use it to `translate code pieces from a language to another one`*
+Depois que o Copilot Chat estiver configurado, você poderá começar a usá-lo:
 
-To translate a piece of code in a specific language, create a new file with the extension of the language you want to translate to (ie: `validator.c` in C language) and try to build the prompt like that:
+- Acessando a visualização de bate-papo na barra de ferramentas esquerda do seu IDE (ícone de bate-papo)
+- Pressionando Ctrl + Shift + i atalho para uma pergunta rápida embutida no chat
 
-```c
-// translate the following code from typescript to java:
-// <code here>
+O primeiro é uma versão fixa, muito útil para manter o chat aberto e tirar dúvidas ao Copilot. O segundo é uma maneira rápida de fazer uma pergunta, obter uma resposta e iniciar comandos.
+
+## Chat View
+
+A visualização de chat oferece uma experiência de chat completa, integrada como qualquer outra visualização de ferramenta em seu IDE. Assim que a visualização estiver aberta, você poderá começar a conversar com o Copilot como seu treinador pessoal de código. Ele mantém o histórico da conversa e você pode fazer perguntas relacionadas às respostas anteriores. Ele também fornece sugestões para perguntas ao longo do caminho. Você pode:
+
+- Faça perguntas gerais sobre codificação em qualquer idioma ou práticas recomendadas
+- Peça para gerar ou corrigir o código relacionado ao arquivo atual e injetar o código diretamente no arquivo
+
+- Comece criando uma script node:
+
 ```
-
-And go to a new line to trigger copilot. It will try generate the code in the new language.
-
-```c
-// translate the following code from typescript to c:
-// function validateDate(date: string): Date {
-//     const dateParts = date.split('/');
-//     const day = parseInt(dateParts[0], 10);
-//     const month = parseInt(dateParts[1], 10) - 1;
-//     const year = parseInt(dateParts[2], 10);
-//     return new Date(year, month, day);
-// }
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-struct Date {
-    int day;
-    int month;
-    int year;
-};
-
-struct Date validateDate(char *date) {
-    struct Date d;
-    char *dateParts[3];
-    char *token;
-    int i = 0;
-
-    token = strtok(date, "/");
-    while (token != NULL) {
-        dateParts[i++] = token;
-        token = strtok(NULL, "/");
-    }
-
-    d.day = atoi(dateParts[0]);
-    d.month = atoi(dateParts[1]) - 1;
-    d.year = atoi(dateParts[2]);
-
-    return d;
-}
+> Node script calculator
 ```
+- No código gerado, passe o mouse no topo e clique em add file. Será criado um arquivo com o código gerado. Salve o arquivo.
 
-*It's not working perfectly every time depending on the size and complexity of the code and the language in input the the one in output but i made a lot of test and it's pretty impressive with common languages: `C, Java, C#, TS, Python, Go, VB.Net, F#, Kotlin, etc...`*
+- Com o arquivo aberto, vá ao chat e peça para ele uma explicação do código, você pode usar prompts como:
 
-*`It's also able to work on more exotic language`: it worked on an language used by a customer that we didn't even found traces on internet. By the way it's not listed in the languages supported by Copilot but it worked. You can't rely only on it to migrate the whole source code without having the developper to understand what happens but it sure will help accelerate the process.*
-
-
-
-## Refactoring
-
-TBD
-
-
-
-
-
-## Writing readme.md and documentation
-
-Copilot is also very powerfull to help you write documentation. It can generate `markdown` and `html` code and accelerate the writing of your readme.md files like for this one for example.
-
-You can show that by creating a new file `demo.md` in the root of the project and start typing the following prompt:
-
-```md
-# Github Copilot documentation
-This documentation is generated with Github Copilot to show what the tool can do.
-
-##
 ```
+> Can you explain me what this code does?
+> Can you generate a function that returns a random number between 1 and 10?
+```
+- Você também pode selecionar o código inteiro ou apenas um trecho, clicar com botão direito, clique em copilot e então explain. Será gerado uma explicação que aparecerá no chat.
 
-From there by starting a new line with a secondary level title it will start generating the content of the documentation and it will showcase how it will accelerate the documentation writing process.
+## Slash Commands
+
+Para ajudar ainda mais o Copilot a fornecer respostas mais relevantes, você pode escolher um tópico para suas perguntas por meio de “comandos de barra”.
+
+Você pode preceder suas entradas de bate-papo com um nome de tópico específico para ajudar o Copilot a fornecer uma resposta mais relevante. Ao começar a digitar /, você verá a lista de tópicos possíveis:
+
+- `/explain` Explica passo a passo como funciona o código selecionado.
+- `/fix` Propõe uma correção para os bugs no código selecionado.
+- `/help` Imprime ajuda geral sobre GitHub Copilot.
+- `/tests` gera testes unitários para o código selecionado.
+- `/vscode` Perguntas sobre comandos e configurações do VS Code.
+- `/clear` Limpa a sessão.
 
 
-# Extra: Copilot Labs
 
-WIP
 
-# Extra: Copilot X - Preview
 
-WIP
+
