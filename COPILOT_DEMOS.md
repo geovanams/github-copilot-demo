@@ -343,12 +343,10 @@ Ele vai criar uma estrutura de um projeto completo. Você pode clicar em **Creat
 Copilot pode ajudar a encontrar problemas de segurança em seu código e sugerir correções. Também pode ajudar a encontrar bad practices e corrigi-lás.
 
 Abra o arquivo album-api/Controllers/UnsecuredController.cs e insira o seguinte prompt no chat:
-
 ```
 > Can you check this code for security issues?
 ```
-O COpilot vai retornar os problemas de segurança identificados e sugestões de correção. Mas você também pode pedir especificamente para ele sugerir as correrções:
-
+O Copilot vai retornar os problemas de segurança identificados e sugestões de correção. Mas você também pode pedir especificamente para ele sugerir as correrções:
 ```
 Can you propose a fix?
 ```
@@ -359,7 +357,6 @@ Copilot Chat pode ajudar a refatorar seu código. Pode ajudar com:
 `rename variables, extract methods, extract classes, etc...`
 
 - Com o arquivo album-api/Controllers/UnsecuredController.cs aberto, insira no chat:
-  
 ```
 > extract methods
 > create Async version of each methods when it makes sense
@@ -376,9 +373,8 @@ Copilot pode entender e gerar linguagem natural e linguagem de código, combinan
 - Copilot também pode ajudar a traduzir códigos de linguagem legadas, porém como ele usa os repositórios públicos do GitHub, linguagens como Java, Javascript e .NET possuem maiores quantidades de código disponível, então a acertividade de retorno para essas linguagens são maiores.
 
 - Com o arquivo legacy/albums.cbl aberto, vamos traduzir para Python,  digite no chat:
-- 
 ```
->translate to python
+> translate to python
 ```
 
 Prontinho! Aqui você viu um pouco de como o GitHub Copilot e GitHub Copilot Chat podem ajudar a impulsionar a produtividade no fluxo de desenvolvimento. Continue a explorar essas funcionalidades para aplicar em seus cenários de desenvolvimento diário!
