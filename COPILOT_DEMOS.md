@@ -1,11 +1,11 @@
 <!-- Generate a focumentation with a list of sample prompt to demo github copilot capacities -->
 
-# Github Copliot demo
+# Github Copilot Demos
 
 ## Pré-Requisitos:
 
 - Conta GitHub
-- IDE Visual Studio Code
+- IDE com suporte GitHub Copilot
 - Licença GitHub Copilot
 
 ## VSCode Shortcuts
@@ -211,18 +211,18 @@ O Copilot também pode ajudá-lo a escrever infraestrutura como código. Ele pod
 
 ## Gerar Comentários Git Commit
 
-- Na aba Soure Control do VS Code selecione o ícone de estrelas para gerar mensagens de commit.
+- Na aba Soure Control do VS Code adicione algum arquivo para stage e selecione o ícone de estrelas para gerar mensagens de commit.
 
 
 ## Code Documentation 
 
-Copilot can understand a natural language prompt and generate code and because it's just language to it, it can also `understand code and explain it in natural language` to help you document your code.
+O Copilot pode entender um prompt em linguagem natural e gerar código e, como é apenas uma linguagem, também pode "entender o código e explicá-lo em linguagem natural" para ajudá-lo a documentar seu código.
 
 ### simple documentation comment
 
-To see that just put you pointer on top of a Class, a method or any line of code and start typing the comment handler for the selected language to trigger copilot. In language like Java, C# or TS for example, just type `// `and let the magic happen.
+Para isso, basta colocar o ponteiro sobre uma classe, um método ou qualquer linha de código e começar a digitar o manipulador de comentários do idioma selecionado para acionar o copiloto. Em linguagens como Java, C# ou TS por exemplo, basta digitar `// `.
 
-Here is an example in the `albums-viewer/routes/index.js` file. Insert a line and start typing on line 13 inside the `try block`
+Aqui está um exemplo no arquivo `albums-viewer/routes/index.js`. Insira uma linha e comece a digitar na linha 13 dentro do `try block`
 
 ```js
 router.get("/", async function (req, res, next) {
@@ -232,13 +232,11 @@ router.get("/", async function (req, res, next) {
 
 ```
 
-Continue to play with it and see what happens on other pieces of code.
-
 ### standardized documentation comment (JavaDoc, JsDoc, etc...)
 
-For this one, to trigger the documentation comment generation, you need to respect the specific comment format:
--  `/**` (for JS/TS) in the `index.js` file for example
-- `///` for C# in the `AlbumController.cs` of the AlbumApi file for example
+Para este, para acionar a geração de comentários da documentação, você precisa respeitar o formato específico dos comentários:
+-  `/**` (Para JS/TS) no arquivo `albums-viewer/utils/validators.js` por exemplo
+- `///` Para C# no arquivo `AlbumController.cs` no método httpGet{id} por exemplo
 
 ```cs
 /// <summary>
@@ -248,6 +246,18 @@ For this one, to trigger the documentation comment generation, you need to respe
 /// <returns></returns>
 [HttpGet("{id}")]
 public IActionResult Get(int id)
+```
+
+### Markdown e html documentation
+
+Ele pode gerar código markdown e html e acelerar a gravação de seus arquivos readme.md como este, por exemplo.
+
+Você pode testar usando o arquivo demo.md na raiz do projeto e começando a digitar o seguinte prompt:
+```md
+# Github Copilot documentation
+This documentation is generated with Github Copilot to show what the tool can do.
+
+##
 ```
 
 
