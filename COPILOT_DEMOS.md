@@ -261,9 +261,12 @@ This documentation is generated with Github Copilot to show what the tool can do
 ```
 
 # Demo - GitHub Copilot Chat
+
 GitHub Copilot é uma IA generativa e, portanto, perfeita para gerar código, mas possui poderosos recursos de análise de seu código que podem ser usados ​​em diversos casos para melhorar a qualidade do código, como: encontrar problemas de segurança, más práticas em seu código e gerar uma correção, refatorar e adicionar comentários ao código legado, gerar testes, etc...
 
-## Iniciar com Copilot chat
+## Iniciar com Copilot Chat
+
+Instale a extensão GitHub Copilot Chat em sua IDE.
 
 Depois que o Copilot Chat estiver configurado, você poderá começar a usá-lo:
 
@@ -286,6 +289,8 @@ A visualização de chat oferece uma experiência de chat completa, integrada co
 ```
 - No código gerado, passe o mouse no topo e clique em add file. Será criado um arquivo com o código gerado. Salve o arquivo.
 
+## Code Explanation and documentation
+
 - Com o arquivo aberto, vá ao chat e peça para ele uma explicação do código, você pode usar prompts como:
 
 ```
@@ -293,6 +298,12 @@ A visualização de chat oferece uma experiência de chat completa, integrada co
 > Can you generate a function that returns a random number between 1 and 10?
 ```
 - Você também pode selecionar o código inteiro ou apenas um trecho, clicar com botão direito, clique em copilot e então explain. Será gerado uma explicação que aparecerá no chat.
+
+- Com o chat, você também pode pedir para ele gerar documentação:
+
+```
+> Generate documentation comments for this code
+```
 
 ## Slash Commands
 
@@ -306,6 +317,71 @@ Você pode preceder suas entradas de bate-papo com um nome de tópico específic
 - `/tests` gera testes unitários para o código selecionado.
 - `/vscode` Perguntas sobre comandos e configurações do VS Code.
 - `/clear` Limpa a sessão.
+
+## Usar Agents
+
+Os agentes são como especialistas que podem ajudá-lo em tarefas específicas. Você pode mencioná-los no chat usando o símbolo @. Como:
+
+- `@workspace`: este agente tem conhecimento sobre o código em seu espaço de trabalho e pode ajudá-lo a navegar nele, encontrando arquivos ou classes relevantes. O agente @workspace usa um meta prompt para determinar quais informações coletar do workspace para ajudar a responder sua pergunta.
+
+- `@vscode`: Este agente conhece comandos e recursos do próprio editor do VS Code e pode ajudá-lo a usá-los.
+
+Abra o GitHub Copilot e faça uma pergunta sobre o projeto usando @Workspace:
+
+```
+> What is about this project ?
+```
+Copilot chat também pode te ajudar a criar um projeto completo:
+
+```
+> @workspace /new create a new asp.net core 6.0 project, with three views Index, Users and products.
+```
+Ele vai criar uma estrutura de um projeto completo. Você pode clicar em **Create Workspace** e ele criará um workspace completo contendo o código gerado.
+
+## Segurança de código
+
+Copilot pode ajudar a encontrar problemas de segurança em seu código e sugerir correções. Também pode ajudar a encontrar bad practices e corrigi-lás.
+
+Abra o arquivo album-api/Controllers/UnsecuredController.cs e insira o seguinte prompt no chat:
+
+```
+> Can you check this code for security issues?
+```
+O COpilot vai retornar os problemas de segurança identificados e sugestões de correção. Mas você também pode pedir especificamente para ele sugerir as correrções:
+
+```
+Can you propose a fix?
+```
+
+## Refatorando Código
+
+Copilot Chat pode ajudar a refatorar seu código. Pode ajudar com:
+`rename variables, extract methods, extract classes, etc...`
+
+- Com o arquivo album-api/Controllers/UnsecuredController.cs aberto, insira no chat:
+  
+```
+> extract methods
+> create Async version of each methods when it makes sense
+```
+
+## Code Translation
+Copilot pode entender e gerar linguagem natural e linguagem de código, combinando você pode usar para `traduzir pedaços de código de una linguagem para outra`.
+
+- Abra o arquivo Validators.ts e solicite ao chat para traduzir para linguagem c:
+
+```
+> translate to C
+```
+- Copilot também pode ajudar a traduzir códigos de linguagem legadas, porém como ele usa os repositórios públicos do GitHub, linguagens como Java, Javascript e .NET possuem maiores quantidades de código disponível, então a acertividade de retorno para essas linguagens são maiores.
+
+- Com o arquivo legacy/albums.cbl aberto, vamos traduzir para Python,  digite no chat:
+- 
+```
+>translate to python
+```
+
+Prontinho! Aqui você viu um pouco de como o GitHub Copilot e GitHub Copilot Chat podem ajudar a impulsionar a produtividade no fluxo de desenvolvimento. Continue a explorar essas funcionalidades para aplicar em seus cenários de desenvolvimento diário!
 
 
 
