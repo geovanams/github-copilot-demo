@@ -1,19 +1,19 @@
-# Github Copilot demo 
+# Github Copilot
 
-## Demo Scenarios
+[Acesse o Laboratório](https://github.com/geovanams/github-copilot-demo/blob/main/COPILOT_DEMOS.md)
 
-It's used as a code base to demonstrate Github Copilot capabilities.
+Repositório usado como base de código para demonstrar os recursos do Github Copilot. (Forked from Azure Samples)
 
-The solution is composed of two microservices: the album API and the album viewer.
+A solução é composta por dois microsserviços: a album API e o album viewer.
 
 ![architecture](./assets/architecture.png)
 
 #### Album API (`album-api`)
 
-The [`album-api`](./album-api) is an .NET 6 minimal Web API that retrieves a list of Albums from Azure Storage using the Dapr State Store API. Upon running the application for the first time the database will be seeded. For subsequent calls, the list of albums will be retrieved from the backing state store.
+A [`album-api`](./album-api) é uma API Web do .NET 6 que recupera uma lista de álbuns do Azure Storage usando a API Dapr State Store. Ao executar o aplicativo pela primeira vez, o banco de dados será propagado. Para chamadas subsequentes, a lista de álbuns será recuperada do armazenamento estadual de apoio.
 
 #### Album Viewer (`album-viewer`)
 
-The [`album-viewer`](./album-viewer) is a node application through which the albums retrieved by the API are surfaced. In order to display the repository of albums, the album viewer microservice uses the Dapr Service invocation API to contact the backend album API.
+A [`album-viewer`](./album-viewer) é uma aplicação node por meio da qual os álbuns recuperados pela API são exibidos. Para exibir o repositório de álbuns, o microsserviço do album viewer usa a API de invocação do Dapr Service para entrar em contato com o backend do album API.
 
 
