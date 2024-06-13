@@ -47,7 +47,15 @@ Se você não consegue se lembrar, basta passar o ponteiro sobre uma sugestão p
 ]
 ```
 
-- Comece a adicionar um novo bloco adicionando um "," após o último "}" e pressione enter
+- Comece a adicionar um novo bloco adicionando um "," após o último "}" e pressione enter.
+
+Nesse primeiro momento possa ser que ele não traga de imediato uma sugestão, pois é necessário passar mais contexto. Então comece a inserir um novo objeto com o valor da  propriedade "language" como "pt" e após a vírgula pressione Enter. Exemplo:
+
+  ```json
+  {
+    "language":"pt",
+  }
+  ```
 <br>
 
 ## Code Generation
@@ -64,36 +72,9 @@ Se você não consegue se lembrar, basta passar o ponteiro sobre uma sugestão p
 ```ts
 // function that validates the format of a IPV6 address string
 ```
-
 <br>
 
-**Descubra novas ferramentas e bibliotecas no trabalho com o Copilot**
-
-- No mesmo arquivo `album-viewer/utils/validators.ts` adicione o seguinte prompt:
-```ts
-// validate phone number from text input and extract the country code
-```
-Para este provavelmente lhe dará uma proposta de chamar alguns métodos não definidos aqui e que precisavam ser definidos. Você pode explorar as alternativas usando o atalho `ctrl+enter` para exibir mais sugestões.
-
-**Complex algoritms generation**
-
-- No arquivo `albums-api/Controllers/AlbumController.cs` tente completar o método `GetByID` substituindo o retorno atual:
-
-```cs
-// GET api/<AlbumController>/5
-[HttpGet("{id}")]
-public IActionResult Get(int id)
-{
-    //here
-}
-```
-
-- Você pode explorar outros prompts:
-```cs
-// function that search album by name, artist or genre
-
-// function that sort albums by name, artist or genre
-```
+Você pode explorar as alternativas usando o atalho `ctrl+enter` para exibir mais sugestões.
 
 ## Tests
 
@@ -178,7 +159,7 @@ describe('validateDate', () => {
 - Você provavelmente tem um github action workflow com pelo menos uma task de "login" no registro do contêiner e uma task de "docker build and deploy". Adicione um novo comentário após essas tasks para marcar(tag) a imagem do docker com o ID de execução do github e enviá-lo para o registro:
 
 ```yml
-# tag the image with the github run id and push to docker hub
+# tag the image with the github run id and push to ACR
 ```
 
 - Teste outro prompt:
@@ -290,10 +271,10 @@ A visualização de chat oferece uma experiência de chat completa, integrada co
 - Faça perguntas gerais sobre codificação em qualquer idioma ou práticas recomendadas
 - Peça para gerar ou corrigir o código relacionado ao arquivo atual e injetar o código diretamente no arquivo
 
-- Comece criando uma script node:
+- Comece criando um script node:
 
 ```
-> Node script calculator
+Node script calculator
 ```
 - No código gerado, passe o mouse no topo e clique em add file. Será criado um arquivo com o código gerado. Salve o arquivo.
 
@@ -302,15 +283,17 @@ A visualização de chat oferece uma experiência de chat completa, integrada co
 - Com o arquivo aberto, vá ao chat e peça para ele uma explicação do código, você pode usar prompts como:
 
 ```
-> Can you explain me what this code does?
-> Can you generate a function that returns a random number between 1 and 10?
+Can you explain me what this code does?
+```
+```
+Can you generate a function that returns a random number between 1 and 10?
 ```
 - Você também pode selecionar o código inteiro ou apenas um trecho, clicar com botão direito, clique em copilot e então explain. Será gerado uma explicação que aparecerá no chat.
 
 - Com o chat, você também pode pedir para ele gerar documentação:
 
 ```
-> Generate documentation comments for this code
+Generate documentation comments for this code
 ```
 
 ## Slash Commands
@@ -326,6 +309,8 @@ Você pode preceder suas entradas de bate-papo com um nome de tópico específic
 - `/vscode` Perguntas sobre comandos e configurações do VS Code.
 - `/clear` Limpa a sessão.
 
+Com um arquivo aberto ou código selecionado, teste alguns desses slash.
+
 ## Usar Agents
 
 Os agentes são como especialistas que podem ajudá-lo em tarefas específicas. Você pode mencioná-los no chat usando o símbolo @. Como:
@@ -337,12 +322,12 @@ Os agentes são como especialistas que podem ajudá-lo em tarefas específicas. 
 Abra o GitHub Copilot e faça uma pergunta sobre o projeto usando @Workspace:
 
 ```
-> What is about this project ?
+What is about this project ?
 ```
 Copilot chat também pode te ajudar a criar um projeto completo:
 
 ```
-> @workspace /new create a new asp.net core 6.0 project, with three views Index, Users and products.
+@workspace /new create a new asp.net core 6.0 project, with three views Index, Users and products.
 ```
 Ele vai criar uma estrutura de um projeto completo. Você pode clicar em **Create Workspace** e ele criará um workspace completo contendo o código gerado.
 
@@ -352,7 +337,7 @@ Copilot pode ajudar a encontrar problemas de segurança em seu código e sugerir
 
 Abra o arquivo album-api/Controllers/UnsecuredController.cs e insira o seguinte prompt no chat:
 ```
-> Can you check this code for security issues?
+Can you check this code for security issues?
 ```
 O Copilot vai retornar os problemas de segurança identificados e sugestões de correção. Mas você também pode pedir especificamente para ele sugerir as correrções:
 ```
@@ -366,8 +351,10 @@ Copilot Chat pode ajudar a refatorar seu código. Pode ajudar com:
 
 - Com o arquivo album-api/Controllers/UnsecuredController.cs aberto, insira no chat:
 ```
-> extract methods
-> create Async version of each methods when it makes sense
+extract methods
+```
+```
+create Async version of each methods when it makes sense
 ```
 
 ## Code Translation
@@ -376,13 +363,13 @@ Copilot pode entender e gerar linguagem natural e linguagem de código, combinan
 - Abra o arquivo Validators.ts e solicite ao chat para traduzir para linguagem c:
 
 ```
-> translate to C
+translate to C
 ```
 - Copilot também pode ajudar a traduzir códigos de linguagem legadas, porém como ele usa os repositórios públicos do GitHub, linguagens como Java, Javascript e .NET possuem maiores quantidades de código disponível, então a acertividade de retorno para essas linguagens são maiores.
 
 - Com o arquivo legacy/albums.cbl aberto, vamos traduzir para Python,  digite no chat:
 ```
-> translate to python
+translate to python
 ```
 
 Prontinho! Aqui você viu um pouco de como o GitHub Copilot e GitHub Copilot Chat podem ajudar a impulsionar a produtividade no fluxo de desenvolvimento. Continue a explorar essas funcionalidades para aplicar em seus cenários de desenvolvimento diário!
