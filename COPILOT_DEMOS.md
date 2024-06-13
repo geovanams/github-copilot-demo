@@ -4,6 +4,8 @@
 
 ## Pré-Requisitos:
 
+- Conta GitHub
+- IDE com suporte GitHub Copilot (VS Code, Visual Studio, JetBrains, Vim/Neovim) **Para esse laboratório estaremos usando VS Code**
 - Clonar repositório:
   
    ```git
@@ -11,9 +13,8 @@
    cd github-copilot-demo
    code .
    ```
-- Conta GitHub
-- IDE com suporte GitHub Copilot (VS Code, Visual Studio, JetBrains, Vim/Neovim)
 - [Licença GitHub Copilot](https://github.com/settings/copilot)
+- [Extensao GitHub Copilot e GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
   
 ## VSCode Shortcuts
 
