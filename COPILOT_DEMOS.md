@@ -4,10 +4,16 @@
 
 ## Pré-Requisitos:
 
+- Clonar repositório:
+  
+   ```git
+   git clone https://github.com/geovanams/github-copilot-demo.git
+   cd github-copilot-demo
+   code .
+   ```
 - Conta GitHub
 - IDE com suporte GitHub Copilot
 - Licença GitHub Copilot
-
 ## VSCode Shortcuts
 
 Depois de começar a digitar um prompt e o copilot gerar propostas, você poderá usar os seguintes atalhos para interagir com o Copilot:
