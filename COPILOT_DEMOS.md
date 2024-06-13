@@ -374,6 +374,15 @@ translate to python
 
 Prontinho! Aqui você viu um pouco de como o GitHub Copilot e GitHub Copilot Chat podem ajudar a impulsionar a produtividade no fluxo de desenvolvimento. Continue a explorar essas funcionalidades para aplicar em seus cenários de desenvolvimento diário!
 
+# Desafio
+
+Executar um mini jogo de pedra, papel e tesoura: (Linguagem de sua escolha)
+ - Mostrar quem venceu cada rodadada
+ - A cada rodada mostrar o score
+
+**Opcional:** Executar em um container Docker.
+
+
 
 
 
