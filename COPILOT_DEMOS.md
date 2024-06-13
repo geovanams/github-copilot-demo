@@ -13,7 +13,7 @@
    ```
 - Conta GitHub
 - IDE com suporte GitHub Copilot
-- Licença GitHub Copilot
+- [Licença GitHub Copilot](https://github.com/settings/copilot)
 ## VSCode Shortcuts
 
 Depois de começar a digitar um prompt e o copilot gerar propostas, você poderá usar os seguintes atalhos para interagir com o Copilot:
